@@ -44,7 +44,7 @@ fmt_dep = dependency('fmt', required: true)
 
 # Versioning from file
 fs = import('fs')
-version_content = fs.read('../../share/VERSION.txt').strip()
+version_content = fs.read('VERSION.txt').strip()
 avro_version = version_content.strip().split('.')
 avro_version_major = avro_version[0]
 avro_version_minor = avro_version[1]
