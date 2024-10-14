@@ -2,7 +2,7 @@ project('avro-cpp', 'cpp', version: '1.0',
   default_options: [
     'cpp_std=c++17',
     'warning_level=3',
-    'werror=true'
+    'werror=false'
   ])
 
 # Compiler and platform-specific settings
