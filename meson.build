@@ -70,7 +70,7 @@ libavro = library('avrocpp', avro_sources,
   include_directories: include_directories('include/avro'),
   dependencies: [boost_dep, snappy_dep, fmt_dep],
   version: '@0@.@1@.@2@'.format(avro_version_major, avro_version_minor, avro_version_patch.split('-')[0]),
-  install: true
+  install: not meson.is_subproject()
 )
 
 # AvroGenCpp executable
@@ -78,7 +78,7 @@ avrogencpp_exe = executable('avrogencpp', 'impl/avrogencpp.cc',
   link_with: libavro,
   include_directories: include_directories('include/avro'),
   dependencies: [boost_dep, snappy_dep, fmt_dep],
-  install: true
+  install: not meson.is_subproject()
 )
 
 # Precompile test executable
